@@ -1,0 +1,375 @@
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
+body {
+  background-color: #9ba8c1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: #111827 !important;
+  border-color: #111827 !important;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+.btn-dark:hover {
+  background-color: #020617 !important;
+}
+
+/* ============================= */
+/* NAVBAR PREMIUM */
+/* ============================= */
+
+.premium-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav-modern {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.nav-modern:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* HOME PAGE */
+/* ============================= */
+
+/* .home-wrapper {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background-image: url('/homeimg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.10);
+  transition: 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* BROWSE EVENTS */
+/* ============================= */
+
+.browse-wrapper {
+  padding-top: 40px;
+}
+
+.search-bar,
+.filter-dropdown {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* ============================= */
+/* EVENT CARD — FINAL CLEAN VERSION */
+/* ============================= */
+
+.event-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.18);
+}
+
+.event-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.event-body {
+  padding: 16px 20px;
+  flex: 1;
+  position: relative;
+  padding-bottom: 80px; /* space for button */
+}
+
+/* Category Badge */
+.event-badge {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white !important;
+}
+
+/* Category Colors */
+.workshop { background-color: #2563eb !important; }
+.meetup { background-color: #7c3aed !important; }
+.seminar { background-color: #f97316 !important; }
+.webinar { background-color: #059669 !important; }
+
+/* Description scroll area */
+.event-desc {
+  max-height: 60px;
+  overflow-y: auto;
+}
+.event-desc::-webkit-scrollbar {
+  width: 6px;
+}
+.event-desc::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+/* Register Button */
+.register-btn {
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 10px 0;
+  background: #111827;
+  color: white;
+  font-weight: 600;
+  border: none;
+
+  position: absolute;
+  bottom: 30px;  /* ensures visible */
+  left: 50%;
+  transform: translateX(-50%); /* CENTER properly */
+}
+.register-btn:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* ============================= */
+/* CREATE EVENT FORM */
+/* ============================= */
+
+.create-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.create-box {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  animation: fadeSlideUp 0.6s ease;
+}
+
+.input-custom {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+}
+.input-custom:focus {
+  border-color: #111827;
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ====================================== */
+/* DARK MODE - GLOBAL */
+/* ====================================== */
+
+html.dark-mode,
+html.dark-mode body {
+  background-color: #111827 !important;
+  color: #e5e7eb !important;
+}
+
+/* Links / generic text */
+html.dark-mode a,
+html.dark-mode p,
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6 {
+  color: #e5e7eb !important;
+}
+
+/* ====================================== */
+/* NAVBAR */
+/* ====================================== */
+
+html.dark-mode .premium-navbar {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+html.dark-mode .navbar-brand,
+html.dark-mode .nav-modern {
+  color: #f3f4f6 !important;
+}
+
+html.dark-mode .nav-modern:hover {
+  color: #38bdf8 !important;
+}
+
+/* ====================================== */
+/* SEARCH + DROPDOWN */
+/* ====================================== */
+
+html.dark-mode .search-bar,
+html.dark-mode .filter-dropdown {
+  background: #1f2937 !important;
+  color: white !important;
+  border: 1px solid #374151 !important;
+}
+
+/* ====================================== */
+/* EVENT CARDS */
+/* ====================================== */
+
+html.dark-mode .event-card {
+  background: #1f2937 !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.05) !important;
+}
+
+html.dark-mode .event-desc {
+  color: #e5e7eb !important;
+}
+
+html.dark-mode .event-desc::-webkit-scrollbar-thumb {
+  background: #4b5563 !important;
+}
+
+/* Register Button */
+html.dark-mode .register-btn {
+  background: #0f172a !important;
+  color: white !important;
+}
+
+/* Category Badge (remains colored) */
+html.dark-mode .event-badge {
+  filter: brightness(0.9);
+}
+
+/* ====================================== */
+/* CREATE EVENT FORM */
+/* ====================================== */
+
+html.dark-mode .create-box {
+  background: #1f2937 !important;
+  color: white !important;
+  box-shadow: 0 8px 30px rgba(255,255,255,0.05) !important;
+}
+
+html.dark-mode .input-custom {
+  background: #111827 !important;
+  border-color: #374151 !important;
+  color: white !important;
+}
+
+/* Text in dropdown/input */
+html.dark-mode option {
+  background: #1f2937 !important;
+  color: white !important;
+}
+.dashboard-wrapper {
+  padding-top: 40px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+}
+
+/* Event image */
+.dash-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Body */
+.dash-body {
+  padding: 16px;
+}
+
+/* Category badge */
+.dash-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+}
+
+/* Category colors */
+.workshop { background: #2563eb; }
+.meetup { background: #7c3aed; }
+.seminar { background: #f97316; }
+.webinar { background: #059669; }
+
+/* DARK MODE */
+html.dark-mode .dashboard-card {
+  background: #1f2937 !important;
+  color: white !important;
+  border: 1px solid #374151;
+}
+
+html.dark-mode .dash-badge {
+  opacity: 0.9;
+}
+
+html.dark-mode .btn-outline-primary {
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+html.dark-mode .btn-outline-danger {
+  color: #f87171;
+  border-color: #f87171;
+}
+
