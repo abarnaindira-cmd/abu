@@ -1,7 +1,8 @@
 import React from "react";
 
 
-// Simple pagination component
+// Simple pagination component for experimental branch
+
 export default function Pagination({ current = 1, totalPages = 1, onChange }) {
   if (totalPages <= 1) return null;
   const pages = [];
