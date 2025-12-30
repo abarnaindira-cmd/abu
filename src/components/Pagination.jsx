@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// Simple pagination component
 export default function Pagination({ current = 1, totalPages = 1, onChange }) {
   if (totalPages <= 1) return null;
   const pages = [];
