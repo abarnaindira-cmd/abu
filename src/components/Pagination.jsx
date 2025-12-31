@@ -1,7 +1,7 @@
 import React from "react";
 
 
-// Simple pagination component for experimental branch
+// Simple pagination component for experimental branch new updations
 
 export default function Pagination({ current = 1, totalPages = 1, onChange }) {
   if (totalPages <= 1) return null;
